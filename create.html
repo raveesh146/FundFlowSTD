@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="createstyle.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <h1 style="display: inline">FundFlow</h1>
+      <div class="left">
+        <a id="connectButton" onclick="connect()">Link wallet</a>
+        <a href="">Login</a>
+      </div>
+    </div>
+    <div class="title">
+      <h1>Proposal of your Project</h1>
+      <p>
+        The Proposal of your Project should provide a detailed description of
+        your project including details about all the activities involved in the
+        project. The proposal should also including details about the milestones
+        set for the project.
+      </p>
+    </div>
+    <div class="card-container">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="container">
+        <div class="log-card">
+          <p class="heading">Start Creating your proposal</p>
+          <p>We are here to help you</p>
+
+          <div class="input-group">
+            <p class="text">Proposal Name</p>
+            <input
+              id="proposalName"
+              class="input"
+              type="text"
+              placeholder="Enter proposal name"
+              required
+            />
+            <p class="text">Short Description</p>
+            <input
+              id="shortDescription"
+              class="input"
+              type="text"
+              placeholder="Input here"
+              required
+            />
+            <p class="text">Amount To Raise</p>
+            <input
+              id="amountToRaise"
+              class="input"
+              type="number"
+              placeholder="Input here"
+              required
+            />
+            <p class="text">Milestones</p>
+            <input
+              id="milestones"
+              class="input"
+              type="text"
+              placeholder="Input here"
+              required
+            />
+            <p class="text">Deadline</p>
+            <input
+              id="deadline"
+              class="input"
+              type="date"
+              placeholder="Input here"
+              required
+            />
+          </div>
+
+          <button id="createButton" class="btn" disabled>Create</button>
+          <p class="no-account">
+            Don't Have an Account ?<a class="link"> Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

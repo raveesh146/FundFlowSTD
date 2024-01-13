@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="loco.css" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="createstyle.css" />
   </head>
@@ -76,14 +77,14 @@
             />
           </div>
 
-          <button id="createButton" class="btn" disabled>Create</button>
+          <button id="createButton" class="btn">Create</button>
           <p class="no-account">
             Don't Have an Account ?<a class="link"> Sign Up</a>
           </p>
         </div>
       </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -95,6 +96,42 @@
       type="text/javascript"
       src="https://unpkg.com/sheryjs/dist/Shery.js"
     ></script>
-    <script src="script.js"></script>
+    <script src="create.js"></script>
+    <script>
+      // Global array to store proposal data
+      var proposals = [];
+
+      document
+        .getElementById("createButton")
+        .addEventListener("click", function () {
+          // Get values from input fields
+          var proposalName = document.getElementById("proposalName").value;
+          var shortDescription =
+            document.getElementById("shortDescription").value;
+          var amountToRaise = document.getElementById("amountToRaise").value;
+          var milestones = document.getElementById("milestones").value;
+          var deadline = document.getElementById("deadline").value;
+
+          // Create an object with the input values
+          var proposal = {
+            name: proposalName,
+            description: shortDescription,
+            amount: amountToRaise,
+            milestones: milestones,
+            deadline: deadline,
+          };
+
+          // Store the proposal object in the global array
+          proposals.push(proposal);
+
+          // Log the current state of the proposals array (for demonstration purposes)
+          console.log(proposals);
+          document.getElementById("proposalName").innerHTML = "";
+          document.getElementById("shortDescription").innerHTML = "";
+          document.getElementById("amountToRaise").innerHTML = "";
+          document.getElementById("milestones").innerHTML = "";
+          document.getElementById("deadline").innerHTML = "";
+        });
+    </script>
   </body>
 </html>
